@@ -1,6 +1,44 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "create-liz": {
+      "root": "packages/create-liz",
+      "sourceRoot": "packages/create-liz/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "packages/create-liz/tsconfig.lib.json",
+              "packages/create-liz/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!packages/create-liz/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "packages/create-liz/jest.config.js",
+            "tsConfig": "packages/create-liz/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/create-liz",
+            "tsConfig": "packages/create-liz/tsconfig.lib.json",
+            "packageJson": "packages/create-liz/package.json",
+            "main": "packages/create-liz/src/index.ts",
+            "assets": ["packages/create-liz/*.md"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   },

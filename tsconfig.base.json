@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@liz/create-liz": ["packages/create-liz/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
