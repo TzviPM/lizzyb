@@ -25,7 +25,10 @@
     }
   },
   "projects": {
-    "create-lizzyb": {
+    "npm-lizzyb": {
+      "tags": []
+    },
+    "npm-create-lizzyb": {
       "tags": []
     }
   },

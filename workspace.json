@@ -1,9 +1,9 @@
 {
   "version": 1,
   "projects": {
-    "create-lizzyb": {
-      "root": "packages/create-lizzyb",
-      "sourceRoot": "packages/create-lizzyb/src",
+    "npm-lizzyb": {
+      "root": "packages/npm-lizzyb",
+      "sourceRoot": "packages/npm-lizzyb/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -12,28 +12,68 @@
           "options": {
             "linter": "eslint",
             "tsConfig": [
-              "packages/create-lizzyb/tsconfig.lib.json",
-              "packages/create-lizzyb/tsconfig.spec.json"
+              "packages/npm-lizzyb/tsconfig.lib.json",
+              "packages/npm-lizzyb/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!packages/create-lizzyb/**/*"]
+            "exclude": ["**/node_modules/**", "!packages/npm-lizzyb/**/*"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "packages/create-lizzyb/jest.config.js",
-            "tsConfig": "packages/create-lizzyb/tsconfig.spec.json",
+            "jestConfig": "packages/npm-lizzyb/jest.config.js",
+            "tsConfig": "packages/npm-lizzyb/tsconfig.spec.json",
             "passWithNoTests": true
           }
         },
         "build": {
           "builder": "@nrwl/node:package",
           "options": {
-            "outputPath": "dist/packages/create-lizzyb",
-            "tsConfig": "packages/create-lizzyb/tsconfig.lib.json",
-            "packageJson": "packages/create-lizzyb/package.json",
-            "main": "packages/create-lizzyb/src/index.ts",
-            "assets": ["packages/create-lizzyb/*.md"]
+            "outputPath": "dist/packages/npm-lizzyb",
+            "tsConfig": "packages/npm-lizzyb/tsconfig.lib.json",
+            "packageJson": "packages/npm-lizzyb/package.json",
+            "main": "packages/npm-lizzyb/src/index.ts",
+            "assets": ["packages/npm-lizzyb/*.md"]
+          }
+        }
+      }
+    },
+    "npm-create-lizzyb": {
+      "root": "packages/npm-create-lizzyb",
+      "sourceRoot": "packages/npm-create-lizzyb/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "packages/npm-create-lizzyb/tsconfig.lib.json",
+              "packages/npm-create-lizzyb/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!packages/npm-create-lizzyb/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "packages/npm-create-lizzyb/jest.config.js",
+            "tsConfig": "packages/npm-create-lizzyb/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/npm-create-lizzyb",
+            "tsConfig": "packages/npm-create-lizzyb/tsconfig.lib.json",
+            "packageJson": "packages/npm-create-lizzyb/package.json",
+            "main": "packages/npm-create-lizzyb/src/index.ts",
+            "assets": ["packages/npm-create-lizzyb/*.md"]
           }
         }
       }

@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lizzyb/create-lizzyb": ["packages/create-lizzyb/src/index.ts"]
+      "lizzyb": ["packages/npm-lizzyb/src/index.ts"],
+      "create-lizzyb": ["packages/npm-create-lizzyb/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

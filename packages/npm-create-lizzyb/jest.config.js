@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'create-liz',
+  name: 'npm-create-lizzyb',
   preset: '../../jest.config.js',
   globals: {
     'ts-jest': {
@@ -10,5 +10,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'html'],
-  coverageDirectory: '../../coverage/packages/create-liz',
+  coverageDirectory: '../../coverage/packages/npm-create-lizzyb',
 };
