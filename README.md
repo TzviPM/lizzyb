@@ -1,4 +1,6 @@
-# Liz
+# Lizzy
+
+> Lizzy makes my life better!
 
 This project was generated using [Nx](https://nx.dev).
 
