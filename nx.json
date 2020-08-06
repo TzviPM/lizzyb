@@ -1,5 +1,5 @@
 {
-  "npmScope": "liz",
+  "npmScope": "lizzyb",
   "affected": {
     "defaultBase": "master"
   },
@@ -25,7 +25,7 @@
     }
   },
   "projects": {
-    "create-liz": {
+    "create-lizzyb": {
       "tags": []
     }
   },

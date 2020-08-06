@@ -1,9 +1,9 @@
 {
   "version": 1,
   "projects": {
-    "create-liz": {
-      "root": "packages/create-liz",
-      "sourceRoot": "packages/create-liz/src",
+    "create-lizzyb": {
+      "root": "packages/create-lizzyb",
+      "sourceRoot": "packages/create-lizzyb/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -12,28 +12,28 @@
           "options": {
             "linter": "eslint",
             "tsConfig": [
-              "packages/create-liz/tsconfig.lib.json",
-              "packages/create-liz/tsconfig.spec.json"
+              "packages/create-lizzyb/tsconfig.lib.json",
+              "packages/create-lizzyb/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!packages/create-liz/**/*"]
+            "exclude": ["**/node_modules/**", "!packages/create-lizzyb/**/*"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "packages/create-liz/jest.config.js",
-            "tsConfig": "packages/create-liz/tsconfig.spec.json",
+            "jestConfig": "packages/create-lizzyb/jest.config.js",
+            "tsConfig": "packages/create-lizzyb/tsconfig.spec.json",
             "passWithNoTests": true
           }
         },
         "build": {
           "builder": "@nrwl/node:package",
           "options": {
-            "outputPath": "dist/packages/create-liz",
-            "tsConfig": "packages/create-liz/tsconfig.lib.json",
-            "packageJson": "packages/create-liz/package.json",
-            "main": "packages/create-liz/src/index.ts",
-            "assets": ["packages/create-liz/*.md"]
+            "outputPath": "dist/packages/create-lizzyb",
+            "tsConfig": "packages/create-lizzyb/tsconfig.lib.json",
+            "packageJson": "packages/create-lizzyb/package.json",
+            "main": "packages/create-lizzyb/src/index.ts",
+            "assets": ["packages/create-lizzyb/*.md"]
           }
         }
       }
